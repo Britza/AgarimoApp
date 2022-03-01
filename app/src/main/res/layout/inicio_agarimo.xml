@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioAgarimo">
+
+    <Button
+        android:id="@+id/paciente"
+        android:layout_width="141dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="119dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="paciente"
+        android:text="PACIENTE"
+        android:textColor="#3BD1BF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="TextContrastCheck" />
+
+
+    <Button
+        android:id="@+id/profesional"
+        android:layout_width="141dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="119dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="profesional"
+        android:text="PROFESIONAL"
+        android:textColor="#3BD1BF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="366dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/gabriela"
+        android:text="AGARIMO"
+        android:textAlignment="center"
+        android:textColor="#FFFDFD"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="273dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="69dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/agarimoinicial" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
