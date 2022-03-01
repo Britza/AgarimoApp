@@ -83,7 +83,7 @@ class Registrarse : AppCompatActivity() {
             val idp = id.text.toString()
             val nombrep = nombre.text.toString()
             val apellidop = apellido.text.toString()
-            val pac = paciente(nombrep, apellidop)
+            val pac = Paciente(nombrep, apellidop)
             Log.d(TAG, pac.toString())
 
             database.child("users/" + idp).setValue(pac)
@@ -92,7 +92,7 @@ class Registrarse : AppCompatActivity() {
             val idpro = id.text.toString()
             val nombrepro = nombre.text.toString()
             val apellidopro = apellido.text.toString()
-            val prof = profesional(nombrepro, apellidopro)
+            val prof = Profesional(nombrepro, apellidopro)
             Log.d(TAG, prof.toString())
 
             database.child("profesionales/" + idpro).setValue(prof)
