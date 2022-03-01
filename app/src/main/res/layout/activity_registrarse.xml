@@ -4,6 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3BD1BF"
     tools:context=".Registrarse">
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColorHint="#0B0B0B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id" />
+
+    <EditText
+        android:id="@+id/apellido"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellido"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#050505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="164dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="108dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Sign up"
+        android:textColor="#3BD1BF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Id"
+        android:inputType="textPersonName"
+        android:textColorHint="#070707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
