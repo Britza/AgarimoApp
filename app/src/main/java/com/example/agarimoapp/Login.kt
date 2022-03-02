@@ -20,7 +20,7 @@ class Login : AppCompatActivity() {
     //Declaramos la variable auth
     private lateinit var auth: FirebaseAuth
 
-    //Declaramos las variables de email, contraseña, registrar e iniciar
+    //Declaramos las variables
     lateinit var email: EditText
     lateinit var password: EditText
     lateinit var iniciar: Button
@@ -66,7 +66,6 @@ class Login : AppCompatActivity() {
      */
     private fun signIn(email: String, password: String) {
 
-
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -83,7 +82,6 @@ class Login : AppCompatActivity() {
                     else{
                         startActivity(profesionales)
                     }
-
 
                 } else {
                     //Si los datos no son correctos, envia un mensaje al usuario,
