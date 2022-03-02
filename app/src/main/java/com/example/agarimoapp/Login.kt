@@ -99,6 +99,9 @@ class Login : AppCompatActivity() {
             }
     }
 
+    /**
+     * Metodo creado para que vaya a la activity de Registrarse llevando las variables paciente y profesional
+     */
     fun registrate(View: View){
         var intent = Intent (this, Registrarse::class.java).apply {
             putExtra(EXTRA_MESSAGE, variable)

@@ -13,6 +13,9 @@ class InicioAgarimo : AppCompatActivity() {
         setContentView(R.layout.inicio_agarimo)
     }
 
+    /**
+     * Metodo creado para que vaya a la activity del Login llevando la variable profesional
+     */
     fun profesional(View: View) {
 
         val intent = Intent(this, Login::class.java).apply {
@@ -22,6 +25,9 @@ class InicioAgarimo : AppCompatActivity() {
 
     }
 
+    /**
+     * Metodo creado para que vaya a la activity del Login llevando la variable paciente
+     */
     fun paciente(View: View) {
         val intent = Intent(this, Login::class.java).apply {
             putExtra(EXTRA_MESSAGE, "paciente")
