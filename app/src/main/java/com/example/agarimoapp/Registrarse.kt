@@ -25,7 +25,6 @@ class Registrarse : AppCompatActivity() {
     private lateinit var database: DatabaseReference
 
     //Declaramos las variables
-    lateinit var id: EditText
     lateinit var nombre: EditText
     lateinit var apellido: EditText
     lateinit var email: EditText
@@ -41,7 +40,6 @@ class Registrarse : AppCompatActivity() {
 
 
         //Inicializamos las variables creadas anteriormente
-        id = findViewById(R.id.id)
         nombre = findViewById(R.id.nombre)
         apellido = findViewById(R.id.apellido)
         email = findViewById(R.id.email)
@@ -65,8 +63,8 @@ class Registrarse : AppCompatActivity() {
 
         //Hacemos la llamada para el metodo de crear cuenta
         registrar.setOnClickListener {
-            realtimeBasePacProf()
             createAccount(email.text.toString(), password.text.toString())
+            realtimeBasePacProf()
             Log.d("estado", "intenta guardar")
 
         }
@@ -80,22 +78,24 @@ class Registrarse : AppCompatActivity() {
         Log.d("estado", "escribe los datos")
 
         if ("paciente" == variable) {
-            val idp = id.text.toString()
+            val uidp = auth.currentUser?.uid
             val nombrep = nombre.text.toString()
             val apellidop = apellido.text.toString()
-            val pac = Paciente(nombrep, apellidop)
+            val emailp = email.text.toString()
+            val pac = Paciente(nombrep, apellidop, emailp)
             Log.d(TAG, pac.toString())
 
-            database.child("users/" + idp).setValue(pac)
+            database.child("Pacientes/" + uidp).setValue(pac)
         }
         else{
-            val idpro = id.text.toString()
+            val uidpro = auth.currentUser?.uid
             val nombrepro = nombre.text.toString()
             val apellidopro = apellido.text.toString()
-            val prof = Profesional(nombrepro, apellidopro)
+            val emailpro = email.text.toString()
+            val prof = Profesional(nombrepro, apellidopro, emailpro)
             Log.d(TAG, prof.toString())
 
-            database.child("profesionales/" + idpro).setValue(prof)
+            database.child("Profesionales/" + uidpro).setValue(prof)
 
         }
 
