@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "594963405939",
+    "firebase_url": "https://trimestre-218c9-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "trimestre-218c9",
+    "storage_bucket": "trimestre-218c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594963405939:android:df6415291f02e611c05e06",
+        "android_client_info": {
+          "package_name": "com.example.agarimoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594963405939-a5asqvvd1boa32qibt1h75kmnuuqt2mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1jBy8GfriEyzWD2EMBFIbTBT0rzw8_IY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594963405939-a5asqvvd1boa32qibt1h75kmnuuqt2mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594963405939:android:6de5791d9e77348ac05e06",
+        "android_client_info": {
+          "package_name": "com.example.intent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594963405939-a5asqvvd1boa32qibt1h75kmnuuqt2mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1jBy8GfriEyzWD2EMBFIbTBT0rzw8_IY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594963405939-a5asqvvd1boa32qibt1h75kmnuuqt2mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

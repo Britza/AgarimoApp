@@ -64,8 +64,7 @@ class Registrarse : AppCompatActivity() {
         //Hacemos la llamada para el metodo de crear cuenta
         registrar.setOnClickListener {
             createAccount(email.text.toString(), password.text.toString())
-            realtimeBasePacProf()
-            Log.d("estado", "intenta guardar")
+
 
         }
     }
@@ -73,29 +72,29 @@ class Registrarse : AppCompatActivity() {
     /**
      * Metodo que sirve para subir los datos a la base de datos de realtime
      */
-    private fun realtimeBasePacProf(){
+    private fun realtimeBasePacProf(uidp: FirebaseUser?){
         Log.d(TAG, "Escribiendo datos")
         Log.d("estado", "escribe los datos")
 
         if ("paciente" == variable) {
-            val uidp = auth.currentUser?.uid
+
             val nombrep = nombre.text.toString()
             val apellidop = apellido.text.toString()
             val emailp = email.text.toString()
             val pac = Paciente(nombrep, apellidop, emailp)
             Log.d(TAG, pac.toString())
 
-            database.child("Pacientes/" + uidp).setValue(pac)
+            database.child("Pacientes/" + uidp!!.uid).setValue(pac)
         }
         else{
-            val uidpro = auth.currentUser?.uid
+
             val nombrepro = nombre.text.toString()
             val apellidopro = apellido.text.toString()
             val emailpro = email.text.toString()
             val prof = Profesional(nombrepro, apellidopro, emailpro)
             Log.d(TAG, prof.toString())
 
-            database.child("Profesionales/" + uidpro).setValue(prof)
+            database.child("Profesionales/" + uidp!!.uid).setValue(prof)
 
         }
 
@@ -119,6 +118,7 @@ class Registrarse : AppCompatActivity() {
                     Log.d("estado", "usuario registrado")
                     val user = auth.currentUser
                     updateUI(user)
+                    realtimeBasePacProf(user)
 
                     if ("paciente" == variable){
                         startActivity(pacientesMap)
